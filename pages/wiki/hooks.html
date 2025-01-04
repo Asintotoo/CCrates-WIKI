@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hooks Guide for CCrates Plugin">
+    <title>Hooks - CCrates</title>
+    <link rel="stylesheet" href="../../styles/hooks.css">
+</head>
+<body>
+
+    <!-- Background for particles -->
+    <div id="particles-js"></div>
+
+    <!-- CCrates button and Menu -->
+    <a href="../wiki.html" class="ccrates-button">Menu</a>
+
+    <!-- Main content for Hooks page -->
+    <div class="wiki-container">
+        <h1>Hooks Guide</h1>
+        <p>Learn how to use the available hooks in the CCrates plugin for customization and integration.</p>
+		<p><italic>Make sure that the plugin is actually installed and working on your server.</italic></p>
+        
+        <!-- ModelEngine Hook Section -->
+        <div class="hook-section">
+            <h2>ModelEngine Hook</h2>
+            <div class="hook-box">
+                <p>The ModelEngine hook allows you to assign a crate to a custom model. This hook can be used to replace crate blocks and allow further customization.</p>
+                <ul>
+                    <li><strong>Usage:</strong> Run "<code>/ccrates modelengine assign &ltcrate&gt</code>"  while looking at a model.</li>
+                </ul>
+                <p>This hook is ideal for users looking to expand the visual aspect of the plugin and enhance the player's experience with custom models.</p>
+            </div>
+        </div>
+		
+		<!-- DecentHolograms Hook Section -->
+        <div class="hook-section">
+            <h2>DecentHolograms Hook</h2>
+            <div class="hook-box">
+                <p>DecentHolograms hook adds a fully customizable hologram above crates blocks and models, enhancing their appearance with dynamic text and visuals..</p>
+                
+                <p>All the holograms are 100% customizable to fit all your needs.</p>
+            </div>
+        </div>
+
+        <!-- PlaceholderAPI Hook Section -->
+        <div class="hook-section">
+            <h2>PlaceholderAPI Hook</h2>
+			<p>PlaceholderAPI allows you to retrive useful data that can be used in Scoreboards, Tablist, Item Lore etc...</p>
+			<p>Here is a list of all plugin's placeholders:</p>
+            <div class="hook-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placeholder</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>%ccrates_opened_&ltcratename|total&gt%</code></td>
+                            <td>Displays the specific or total amount of crate opened.</td>
+                            <td><code>%ccrates_opened_examplecrate%</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>%ccrates_keys_&ltcratename&gt%</code></td>
+                            <td>Displays the amount keys</td>
+                            <td><code>%ccrates_keys_examplecrate%</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>%ccrates_virtualkeys_&ltcratename&gt%</code></td>
+                            <td>Displays the amount of virtual keys</td>
+                            <td><code>%ccrates_virtualkeys_examplecrate%</code></td>
+                        </tr>
+						<tr>
+                            <td><code>%ccrates_phisicalkeys_&ltcratename&gt%</code></td>
+                            <td>Displays the amount of phisical keys</td>
+                            <td><code>%ccrates_phisicalkeys_examplecrate%</code></td>
+                        </tr>
+						<tr>
+                            <td><code>%ccrates_multiplier_&ltcratename&gt%</code></td>
+                            <td>Displays the current legendary multiplier for that crate</td>
+                            <td><code>%ccrates_multiplier_examplecrate%</code></td>
+                        </tr>
+						<tr>
+                            <td><code>%ccrates_top_&ltpos&gt_&ltcratename|total&gt_&ltname|value&gt%</code></td>
+                            <td>Displays the name or the value at the given leaderboard position for crate opened from a crate or all crates</td>
+                            <td><code>%ccrates_top_1_examplecrate_name%</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Dictation Hook Section -->
+        <div class="hook-section">
+            <h2>Dictation Hook</h2>
+            <div class="hook-box">
+                <p>If Dictation is installed on the server this plugin will automatically hook with it (unless <code>dictation-hook</code> is set to <code>false</code> in the <code>config.yml</code>) linking SQL and Redis database.</p>
+               
+                <p>Utilize this feature to allow CCrates to link to a great server core like Dictation and have everything in one place.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CCrates Wiki. Created with ❤️ by Asintoto.</p>
+    </footer>
+
+    <script src="../../scripts/particles.min.js"></script>
+    <script src="../../scripts/script.js"></script>
+
+</body>
+</html>

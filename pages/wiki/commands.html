@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Commands Guide for CCrates Plugin">
+    <title>Commands - CCrates</title>
+    <link rel="stylesheet" href="../../styles/commands.css">
+</head>
+<body>
+
+    <!-- Background for particles -->
+    <div id="particles-js"></div>
+
+    <a href="../wiki.html" class="ccrates-button">Menu</a>
+
+    <!-- Main content for Commands page -->
+    <div class="wiki-container">
+        <h1>Commands & Permissions</h1>
+        <p>Below is a list of available commands for the CCrates plugin, along with their permissions and descriptions.</p>
+        
+        <!-- Command Table -->
+        <div class="command-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Command</th>
+                        <th>Permission</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>/ccrates reload</td>
+                        <td>ccrates.command.reload</td>
+                        <td>Reload the plugin.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates list</td>
+                        <td>ccrates.command.list</td>
+                        <td>Show the list of all crates.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates key give &ltplayer&gt &ltcrate&gt &ltkey-type&gt [amount]</td>
+                        <td>ccrates.command.keys.give</td>
+                        <td>Give keys to a player.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates key giveall &ltcrate&gt &ltkey-type&gt [amount]</td>
+                        <td>ccrates.command.keys.giveall</td>
+                        <td>Give keys to all players.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates key set &ltplayer&gt &ltcrate&gt &ltamount&gt</td>
+                        <td>ccrates.command.keys.set</td>
+                        <td>Set a player's virtual keys.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates key take &ltplayer&gt &ltcrate&gt &ltamount&gt</td>
+                        <td>ccrates.command.keys.take</td>
+                        <td>Remove virtual keys from a player.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates key take &ltplayer&gt &ltcrate&gt</td>
+                        <td>ccrates.command.keys.get</td>
+                        <td>Get the keys of a player.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates open &ltplayer&gt &ltcrate&gt</td>
+                        <td>ccrates.command.open</td>
+                        <td>Open a crate for a player (if they can open it).</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates forceopen &ltplayer&gt &ltcrate&gt</td>
+                        <td>ccrates.command.forceopen</td>
+                        <td>Open a crate for a player even if they can't open it.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates forceopen &ltplayer&gt &ltcrate&gt</td>
+                        <td>ccrates.command.forceopen</td>
+                        <td>Open a crate for a player even if they can't open it.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates debug printdata &ltplayer&gt</td>
+                        <td>ccrates.command.debug.printdata</td>
+                        <td>Print user data of a player.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates debug savecache &ltplayer&gt</td>
+                        <td>ccrates.command.debug.savecache</td>
+                        <td>Force a cache saving to the database.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates broadcast &ltmessage&gt</td>
+                        <td>ccrates.command.broadcast</td>
+                        <td>Broadcast a message to all player. Also hook with Redis to send the message across multiple servers. (Use &ltnew-line&gt to insert a new line).</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates say &ltplayer&gt &ltmessage&gt</td>
+                        <td>ccrates.command.say</td>
+                        <td>Send a message to a player. (Use &ltnew-line&gt to insert a new line).</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates preview &ltcrate&gt &ltplayer&gt</td>
+                        <td>ccrates.command.preview</td>
+                        <td>Open a crate preview for a player.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates place &ltcrate&gt</td>
+                        <td>ccrates.command.place</td>
+                        <td>Assign a crate to the targetted block.</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates modelengine assign &ltcrate&gt</td>
+                        <td>ccrates.command.modelengine.assign</td>
+                        <td>Assign a crate to a ModelEngine model. (Requires ModelEngine4 installed on the server).</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates edit addprize &ltcrate&gt &ltchance&gt &ltmax-chance&gt &ltrarity&gt &ltdisplay-name&gt</td>
+                        <td>ccrates.command.edit.addprize</td>
+                        <td>Add the selected item as a prize for the crate</td>
+                    </tr>
+                    <tr>
+                        <td>/ccrates edit setkeyitem &ltcrate&gt</td>
+                        <td>ccrates.command.edit.setkeyitem</td>
+                        <td>Set the selected item as the key for the crate</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>If you need further assistance, refer to the rest of the wiki or contact support.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CCrates Wiki. Created with ❤️ by Asintoto.</p>
+    </footer>
+
+    <script src="../../scripts/particles.min.js"></script>
+    <script src="../../scripts/script.js"></script>
+
+</body>
+</html>

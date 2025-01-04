@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed Explanation of Crates and Their Rewards">
+    <title>Crates - CCrates</title>
+    <link rel="stylesheet" href="../../styles/crates.css">
+</head>
+<body>
+
+    <!-- Background for particles -->
+    <div id="particles-js"></div>
+
+    <a href="../wiki.html" class="ccrates-button">Menu</a>
+
+    <!-- Main content for Crates page -->
+    <div class="wiki-container">
+        <h1>Crates Configuration</h1>
+        <p>This page explains how to configure and set up crates and their rewards in CCrates. Below is an example of a yaml file used for crate configuration.</p>
+        
+        <div class="config-box">
+            <h2>Example Crate Configuration</h2>
+            <pre class="code">
+<span class="comment"># Example Crate Configuration</span>
+display-name: "&a&lExample Crate"  <span class="comment"># The display name of the crate in-game, uses color codes.</span>
+opening: "COUNTDOWN"  <span class="comment"># The animation type when opening the crate.</span>
+
+hologram:
+  enable: true  <span class="comment"># Enables or disables the hologram above the crate.</span>
+  height: 1.5  <span class="comment"># The height at which the hologram will appear.</span>
+  update-interval: 10  <span class="comment"># Time in seconds for how often the hologram updates.</span>
+  range: 10  <span class="comment"># The range in which players can see the hologram.</span>
+  lines:  <span class="comment"># The lines to be displayed in the hologram.</span>
+    - "%crate%"  <span class="comment"># The name of the crate will be displayed here.</span>
+    - "&7Right Click to Open"  <span class="comment"># Instruction for players to right-click to open the crate.</span>
+    - "&7Left Click for Preview"  <span class="comment"># Instruction for players to left-click to preview the crate.</span>
+
+key:
+  material: LIME_DYE  <span class="comment"># The material used for the crate key.</span>
+  display-name: "&a&lExample Crate Key"  <span class="comment"># The display name of the key.</span>
+  glow: true  <span class="comment"># Whether the crate key should glow (true or false).</span>
+  lore:  <span class="comment"># Lore for the crate key.</span>
+    - "&7Use this to open an Example Crate"  <span class="comment"># Description of the key.</span>
+
+prizes:
+  1:  <span class="comment"># Prize 1, can be multiple prizes with numbers as identifiers.</span>
+    display-name: "&bDiamond Gear"  <span class="comment"># Display name for the prize.</span>
+    chance: 50  <span class="comment"># The chance (out of "max-chance") to get this prize.</span>
+    max-chance: 100  <span class="comment"># The maximum chance for this prize (used for randomization).</span>
+    rarity: "COMMON"  <span class="comment"># The rarity of the prize.</span>
+    firework:
+      enable: true  <span class="comment"># Enable fireworks when this prize is given.</span>
+      color: "255:0:0"  <span class="comment"># Firework color in RGB format.</span>
+    guaranteed:
+      value: true  <span class="comment"># Whether this prize is guaranteed (it will be given once the conditions are met).</span>
+      crate-required: 20  <span class="comment"># The required number of crates to be opened for this prize to be guaranteed.</span>
+    items:
+      diamond_sword:  <span class="comment"># The first item in the prize.</span>
+        material: DIAMOND_SWORD  <span class="comment"># Material of the item.</span>
+        display-name: "&bExample Sword"  <span class="comment"># Display name of the item.</span>
+        lore:
+          - "&7This is an example"  <span class="comment"># Lore for the item.</span>
+        enchantments:
+          - "sharpness:1"  <span class="comment"># Enchantment on the item.</span>
+      diamond_axe:  <span class="comment"># The second item in the prize.</span>
+        material: DIAMOND_AXE  <span class="comment"># Material of the item.</span>
+        display-name: "&bExample Axe"  <span class="comment"># Display name of the item.</span>
+        lore:
+          - "&7This is an example"  <span class="comment"># Lore for the item.</span>
+        enchantments:
+          - "sharpness:1"  <span class="comment"># Enchantment on the item.</span>
+    commands:
+      - "cc broadcast %prefix% &r&e%player% has opened %crate-name%"  <span class="comment"># Command to broadcast when the prize is given.</span>
+
+  2:  <span class="comment"># Prize 2.</span>
+    display-name: "&fLol Nothing"  <span class="comment"># Display name for the prize.</span>
+    chance: 50  <span class="comment"># The chance (out of "max-chance") for this prize.</span>
+    max-chance: 100  <span class="comment"># The maximum chance for this prize.</span>
+    permission: "ccrates.prizes.nothing"  <span class="comment"># Permission required to receive this prize.</span>
+    rarity: "UNCOMMON"  <span class="comment"># The rarity of the prize.</span>
+    commands:
+      - "cc broadcast %prefix% &r&e%player% has opened %crate-name%"  <span class="comment"># Command for when this prize is given.</span>
+      - "cc broadcast %prefix% &r&e%player% &7found nothing in %crate-name%"  <span class="comment"># Another command.</span>
+            </pre>
+        </div>
+		
+		<br/>
+        <div class="additional-info">
+    <h3>Rarity and Opening Animations</h2>
+    <p>
+        The <strong>rarity</strong> can be one of the following values:
+        <strong>COMMON</strong>, <strong>UNCOMMON</strong>, <strong>RARE</strong>, <strong>EPIC</strong>, or <strong>LEGENDARY</strong>.
+    </p>
+    <p>
+        The <strong>opening</strong> animation can be one of the following:
+        <strong>INSTANT</strong>, <strong>COUNTDOWN</strong>, <strong>CSGO</strong>, <strong>COSMIC</strong>, or <strong>SPIRAL</strong>.
+        Each animation corresponds to a different opening style:
+    </p>
+    <ul>
+        <li><strong>INSTANT</strong>: The crate opens immediately upon right-clicking.</li>
+        <li><strong>COUNTDOWN</strong>: A countdown is displayed before the prize is given.</li>
+        <li><strong>CSGO</strong>: The animation mimics the crate opening animation seen in CSGO.</li>
+        <li><strong>COSMIC</strong>: The player is prompted to select a given amount of random slots in a gui, then an animation starts after which the prizes which ended up in those selected slots are given to the player.</li>
+        <li><strong>SPIRAL</strong>: A GUI is opened where a slow spiral of prizes is composing, the prizes that ends up being in the final slot will be given to the player.</li>
+    </ul>
+	
+	<h3>Editing rarities and openings</h3>
+    <p>
+        You can edit rarities' display names in the your selected messages file (default: <code>messages/en.yml</code>) and their chance modification in the <code>config.yml</code>.
+    </p>
+	<p>
+        You can edit some openings settings in their specific yaml file located in the "openings" folder within the plugin directory.
+    </p>
+
+    <h3>ItemCreator Library</h3>
+    <p>
+        Each prize item is created using the <a href="https://github.com/Asintotoo/ItemCreator" target="_blank">ItemCreator library</a>,
+        which allows for easy and customizable creation of items in your crates.
+    </p>
+
+    <h3>Adding Prizes via Command</h3>
+    <p>
+        You can also add prizes to crates via commands. For more details, visit the <a href="commands.html" target="_self">Commands</a> page.
+    </p>
+</div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CCrates Wiki. Created with ❤️ by Asintoto.</p>
+    </footer>
+
+    <script src="../../scripts/particles.min.js"></script>
+    <script src="../../scripts/script.js"></script>
+
+</body>
+</html>

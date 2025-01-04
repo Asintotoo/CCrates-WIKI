@@ -1,0 +1,196 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Wiki container setup */
+.wiki-container {
+	margin-left: 15%;
+	align: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 0px;
+    width: 70%;
+}
+
+/* Headings */
+.wiki-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.wiki-container p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Hook section */
+.hook-section {
+    margin: 30px 0;
+}
+
+.hook-box {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.hook-box h2 {
+    font-size: 2rem;
+    color: #00796b;
+}
+
+.hook-box ul {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.hook-table table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hook-table th, .hook-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    color: black;
+}
+
+.hook-table th {
+    background-color: #00796b;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #2b3e50;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Particles background */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 190%;
+    background-color: #2b3e50;
+    z-index: -1;
+}
+
+.hook-section {
+    background-color: #e0f7fa; /* Light blue background */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow to make it stand out */
+    font-family: 'Arial', sans-serif; /* Simple font */
+    text-align: left; /* Align text to the left */
+}
+
+/* Styling for the step headings */
+.hook-section h2 {
+    color: #00796b; /* Darker teal for the step headings */
+    font-size: 1.4rem; /* Slightly smaller font size */
+    margin-bottom: 10px;
+}
+
+/* Styling for the paragraphs */
+.hook-section p {
+    color: #333; /* Dark text for readability */
+    font-size: 1rem; /* Reduced font size for paragraphs */
+    margin-bottom: 15px;
+}
+
+.hook-section li {
+    color: #333; /* Dark text for readability */
+    font-size: 1rem; /* Reduced font size for paragraphs */
+    margin-bottom: 15px;
+}
+
+.button {
+    display: inline-block;
+	margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners like the home page buttons */
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and scaling */
+	background-color: #007bff;
+    color: white;
+}
+
+.button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+	background-color: #0056b3;
+}
+
+.ccrates-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #24292f; /* Black background */
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.ccrates-button:hover {
+    background-color: #0366d6; /* Change color on hover */
+}
+
+.ccrates-menu-button {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #24292f; /* Black background */
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.ccrates-menu-button:hover {
+    background-color: #0366d6; /* Change color on hover */
+}

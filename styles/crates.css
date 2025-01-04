@@ -1,0 +1,198 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Particles background setup */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2b3e50;
+    z-index: -1; /* Ensure particles are in the background */
+}
+
+/* Main container for content */
+.wiki-container {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 30px;
+    width: 70%;
+}
+
+/* Style for code blocks */
+.config-box {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 20px;
+	margin-left: 120px;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: monospace;
+    width: 100%;
+    max-width: 900px;
+    overflow-x: auto;
+    text-align: left;  /* Align the YAML code to the left */
+    white-space: pre-wrap; /* Ensure the code doesn't overflow */
+}
+
+/* Code syntax highlighting */
+.code {
+    color: #000000;  /* Set text color to black */
+}
+
+.comment {
+    color: #32a852;  /* Green for comments to distinguish them */
+}
+
+.wiki-container p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Style for the bullet list in explanations */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #2b3e50;
+    color: white;
+    font-size: 1rem;
+}
+/* Styling for buttons */
+.button {
+    display: inline-block;
+	margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners like the home page buttons */
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and scaling */
+	background-color: #007bff;
+    color: white;
+}
+
+.button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+	background-color: #0056b3;
+}
+
+.ccrates-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #24292f; /* Black background */
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.ccrates-button:hover {
+    background-color: #0366d6; /* Change color on hover */
+}
+
+.ccrates-menu-button {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #24292f; /* Black background */
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.ccrates-menu-button:hover {
+    background-color: #0366d6; /* Change color on hover */
+}
+
+/* Additional Information Section */
+.additional-info {
+	text-align: left;
+    background-color: #f4f4f9;  /* Light background for the section */
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.additional-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #00796b;  /* Dark teal color */
+}
+
+.additional-info h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #00796b;
+}
+
+.additional-info p, .additional-info ul {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.additional-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.additional-info ul li {
+    margin: 10px 0;
+}
+
+.additional-info a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.additional-info a:hover {
+    text-decoration: underline;
+}

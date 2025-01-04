@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Usage Guide for CCrates Plugin">
+    <title>Usage - CCrates</title>
+    <link rel="stylesheet" href="../../styles/usage.css">
+</head>
+<body>
+
+    <!-- Background for particles -->
+    <div id="particles-js"></div>
+
+    <a href="../wiki.html" class="ccrates-button">Menu</a>
+
+    <!-- Main content for Usage page -->
+    <div class="wiki-container">
+        <h1>Usage Guide</h1>
+        <p>Follow these steps to create and configure crates with the CCrates plugin.</p>
+		<br/>
+        
+        <!-- Step 1: Create a Crate -->
+        <div class="usage-step">
+            <h2>Step 1: Create a Crate</h2>
+            <p>To create a crate, add a .yml file inside the <code>crates</code> folder within the plugin directory.</p>
+            <p>In the <code>config.yml</code>, specify the internal crate name and its file path like this:</p>
+            <pre>examplecrate: "examplecrate.yml"</pre>
+        </div>
+
+        <!-- Step 2: Crate Configuration -->
+        <div class="usage-step">
+            <h2>Step 2: Configure Your Crate</h2>
+            <p>Each crate needs the following:</p>
+            <ul>
+                <li><strong>Display Name</strong></li>
+                <li><strong>Opening Animation</strong></li>
+                <li><strong>Hologram Description</strong></li>
+                <li><strong>Key Item</strong></li>
+                <li><strong>Prize List</strong></li>
+            </ul>
+            <p>Each prize can include both items and commands. For commands, you can use placeholders like:</p>
+            <ul>
+                <li><code>%player%</code> - The player's name</li>
+                <li><code>%crate-name%</code> - The crate's name</li>
+                <li><code>%prize%</code> - The prize's display name</li>
+            </ul>
+        </div>
+
+        <!-- Step 3: Additional Info -->
+        <div class="usage-step">
+            <h2>Step 3: More Information</h2>
+            <p>For more information, visit the <a href="crates.html" class="link">Crates</a> page or check the example file generated when the plugin is first run.</p>
+        </div>
+		<div class="usage-step">
+		<h2>Configuration Explanation</h2>
+			<div class="config-box">
+        <pre class="code">
+<span class="comment"># DO NOT edit this line, it's for internal purposes</span>
+plugin-version: "${version}"  <span class="comment"># The version of the plugin</span>
+
+<span class="comment"># OFF, LOW, MEDIUM, HIGH</span>
+log-level: "HIGH"  <span class="comment"># Set the log level (controls how much info is logged)</span>
+
+language: "en"  <span class="comment"># The language of the plugin (files are located in messages folder)</span>
+
+dictation-hook: true  <span class="comment"># Whether the Dictation hook is enabled</span>
+
+update-check: true  <span class="comment"># Whether to check for plugin updates</span>
+
+<span class="comment"># Database configuration (sqlite or mysql)</span>
+database:
+  type: "sqlite"  <span class="comment"># Use either "sqlite" or "mysql" for database type</span>
+  database-name: "storage"  <span class="comment"># The name of the database</span>
+  ip-address: "localhost"  <span class="comment"># The IP address for MySQL (not needed for SQLite)</span>
+  port: 3306  <span class="comment"># Port for MySQL database</span>
+  user: "root"  <span class="comment"># Username for MySQL</span>
+  password: ""  <span class="comment"># Password for MySQL</span>
+  table-name: crates  <span class="comment"># The name of the table storing crate data</span>
+
+<span class="comment"># Redis configuration</span>
+redis:
+  server-name: global  <span class="comment"># Unique name for your server</span>
+  enable: false  <span class="comment"># Whether Redis is enabled</span>
+  host: "localhost"  <span class="comment"># Redis host</span>
+  port: 6379  <span class="comment"># Redis port</span>
+  username: "username"  <span class="comment"># Redis username</span>
+  password: "password"  <span class="comment"># Redis password</span>
+  channel-name: "ccrates-broadcast"  <span class="comment"># Channel for broadcasting messages via Redis</span>
+
+<span class="comment"># Database and Redis configuration section are ignored </span>
+<span class="comment"># when Dictation is present and hooked on the server </span>
+
+<span class="comment"># Rarity configuration</span>
+rarity:
+  common: 1.0  <span class="comment"># Common prize chance multiplier</span>
+  uncommon: 0.7  <span class="comment"># Uncommon prize chance multiplier</span>
+  rare: 0.5  <span class="comment"># Rare prize chance multiplier</span>
+  epic: 0.2  <span class="comment"># Epic prize chance multiplier</span>
+  legendary: 0.1  <span class="comment"># Legendary prize chance multiplier</span>
+
+legendary-multiplier: 1  <span class="comment"># Multiplier for legendary prize chances</span>
+give-virtual-key-if-full-inv: true  <span class="comment"># Give a virtual key if the player’s inventory is full</span>
+cache-saving-interval: 300  <span class="comment"># Interval where all caches are pushed to the database</span>
+
+deal-knockback-on-no-key: true  <span class="comment"># Whether to deal knockback if the player doesn’t have a key</span>
+protect-model-engine-entities: true  <span class="comment"># Whether to protect ModelEngine entities</span>
+require-holding-key: true  <span class="comment"># Whether players must hold the crate key to open it</span>
+
+<span class="comment"># Sound configuration</span>
+sounds:
+  no-key:
+    enable: true  <span class="comment"># Whether the "no-key" sound is enabled</span>
+    sound: "entity.villager.no"  <span class="comment"># The sound that plays when the player doesn’t have a key</span>
+    volume: 1  <span class="comment"># Volume of the sound</span>
+    pitch: 1  <span class="comment"># Pitch of the sound</span>
+
+<span class="comment"># Fallback prize icon configuration</span>
+fallback-prize-icon:
+  material: PAPER  <span class="comment"># The material of the fallback prize icon</span>
+  display-name: "&bMysterious Price"  <span class="comment"># Display name of the fallback prize</span>
+  glow: true  <span class="comment"># Whether the fallback prize icon should glow</span>
+  lore:
+    - "&7This price does not contain items."  <span class="comment"># Lore for the fallback prize icon</span>
+    - "&7It may contains commands or something else... who knows..."  <span class="comment"># Additional lore</span>
+
+<span class="comment"># Crates mapping to yml files</span>
+crates:
+  examplecrate: "examplecrate.yml"  <span class="comment"># Mapping for a crate, pointing to its .yml file</span>
+        </pre>
+    </div>
+    </div>
+		</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CCrates Wiki. Created with ❤️ by Asintoto.</p>
+    </footer>
+
+    <script src="../../scripts/particles.min.js"></script>
+    <script src="../../scripts/script.js"></script>
+
+</body>
+</html>
