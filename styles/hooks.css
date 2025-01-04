@@ -1,11 +1,9 @@
-/* Reset default margins and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body setup */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
@@ -17,7 +15,6 @@ body {
     margin: 0;
 }
 
-/* Wiki container setup */
 .wiki-container {
 	margin-left: 15%;
 	align: center;
@@ -28,7 +25,6 @@ body {
     width: 70%;
 }
 
-/* Headings */
 .wiki-container h1 {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -40,7 +36,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Hook section */
 .hook-section {
     margin: 30px 0;
 }
@@ -87,7 +82,6 @@ body {
     color: white;
 }
 
-/* Footer */
 footer {
     text-align: center;
     width: 100%;
@@ -97,7 +91,6 @@ footer {
     font-size: 1rem;
 }
 
-/* Particles background */
 #particles-js {
     position: absolute;
     top: 0;
@@ -109,32 +102,30 @@ footer {
 }
 
 .hook-section {
-    background-color: #e0f7fa; /* Light blue background */
+    background-color: #e0f7fa; 
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow to make it stand out */
-    font-family: 'Arial', sans-serif; /* Simple font */
-    text-align: left; /* Align text to the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: 'Arial', sans-serif; 
+    text-align: left; 
 }
 
-/* Styling for the step headings */
 .hook-section h2 {
-    color: #00796b; /* Darker teal for the step headings */
-    font-size: 1.4rem; /* Slightly smaller font size */
+    color: #00796b; 
+    font-size: 1.4rem; 
     margin-bottom: 10px;
 }
 
-/* Styling for the paragraphs */
 .hook-section p {
-    color: #333; /* Dark text for readability */
-    font-size: 1rem; /* Reduced font size for paragraphs */
+    color: #333; 
+    font-size: 1rem; 
     margin-bottom: 15px;
 }
 
 .hook-section li {
-    color: #333; /* Dark text for readability */
-    font-size: 1rem; /* Reduced font size for paragraphs */
+    color: #333; 
+    font-size: 1rem; 
     margin-bottom: 15px;
 }
 
@@ -145,15 +136,15 @@ footer {
     font-size: 1.2rem;
     text-align: center;
     text-decoration: none;
-    border-radius: 25px; /* Rounded corners like the home page buttons */
+    border-radius: 25px; 
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and scaling */
+    transition: background-color 0.3s, transform 0.3s; 
 	background-color: #007bff;
     color: white;
 }
 
 .button:hover {
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    transform: scale(1.05); 
 	background-color: #0056b3;
 }
 
@@ -164,7 +155,7 @@ footer {
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
-    background-color: #24292f; /* Black background */
+    background-color: #24292f; 
     border: 2px solid transparent;
     border-radius: 8px;
     font-weight: bold;
@@ -173,7 +164,7 @@ footer {
 }
 
 .ccrates-button:hover {
-    background-color: #0366d6; /* Change color on hover */
+    background-color: #0366d6; 
 }
 
 .ccrates-menu-button {
@@ -183,7 +174,7 @@ footer {
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
-    background-color: #24292f; /* Black background */
+    background-color: #24292f; 
     border: 2px solid transparent;
     border-radius: 8px;
     font-weight: bold;
@@ -192,5 +183,5 @@ footer {
 }
 
 .ccrates-menu-button:hover {
-    background-color: #0366d6; /* Change color on hover */
+    background-color: #0366d6; 
 }

@@ -1,11 +1,9 @@
-/* Reset default margins and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body setup */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
@@ -19,7 +17,6 @@ body {
     min-height: 100vh;
 }
 
-/* Particles background setup */
 #particles-js {
     position: absolute;
     top: 0;
@@ -27,10 +24,9 @@ body {
     width: 100%;
     height: 100%;
     background-color: #2b3e50;
-    z-index: -1; /* Ensure particles are in the background */
+    z-index: -1; 
 }
 
-/* Main container for content */
 .wiki-container {
     text-align: center;
     color: white;
@@ -39,7 +35,6 @@ body {
     width: 70%;
 }
 
-/* Style for code blocks */
 .config-box {
     background-color: #f7f7f7;
     padding: 20px;
@@ -52,17 +47,16 @@ body {
     width: 100%;
     max-width: 900px;
     overflow-x: auto;
-    text-align: left;  /* Align the YAML code to the left */
-    white-space: pre-wrap; /* Ensure the code doesn't overflow */
+    text-align: left;  
+    white-space: pre-wrap; 
 }
 
-/* Code syntax highlighting */
 .code {
-    color: #000000;  /* Set text color to black */
+    color: #000000;  
 }
 
 .comment {
-    color: #32a852;  /* Green for comments to distinguish them */
+    color: #32a852;  
 }
 
 .wiki-container p {
@@ -70,7 +64,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Style for the bullet list in explanations */
 ul {
     list-style-type: none;
     padding: 0;
@@ -81,7 +74,6 @@ ul li {
     font-size: 1.1rem;
 }
 
-/* Footer */
 footer {
     text-align: center;
     width: 100%;
@@ -90,7 +82,7 @@ footer {
     color: white;
     font-size: 1rem;
 }
-/* Styling for buttons */
+
 .button {
     display: inline-block;
 	margin: 10px;
@@ -98,15 +90,15 @@ footer {
     font-size: 1.2rem;
     text-align: center;
     text-decoration: none;
-    border-radius: 25px; /* Rounded corners like the home page buttons */
+    border-radius: 25px; 
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and scaling */
+    transition: background-color 0.3s, transform 0.3s; 
 	background-color: #007bff;
     color: white;
 }
 
 .button:hover {
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    transform: scale(1.05); 
 	background-color: #0056b3;
 }
 
@@ -117,7 +109,7 @@ footer {
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
-    background-color: #24292f; /* Black background */
+    background-color: #24292f; 
     border: 2px solid transparent;
     border-radius: 8px;
     font-weight: bold;
@@ -126,7 +118,7 @@ footer {
 }
 
 .ccrates-button:hover {
-    background-color: #0366d6; /* Change color on hover */
+    background-color: #0366d6; 
 }
 
 .ccrates-menu-button {
@@ -136,7 +128,7 @@ footer {
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
-    background-color: #24292f; /* Black background */
+    background-color: #24292f; 
     border: 2px solid transparent;
     border-radius: 8px;
     font-weight: bold;
@@ -145,13 +137,12 @@ footer {
 }
 
 .ccrates-menu-button:hover {
-    background-color: #0366d6; /* Change color on hover */
+    background-color: #0366d6; 
 }
 
-/* Additional Information Section */
 .additional-info {
 	text-align: left;
-    background-color: #f4f4f9;  /* Light background for the section */
+    background-color: #f4f4f9;  
     padding: 30px;
     margin-top: 30px;
     border-radius: 10px;
@@ -164,7 +155,7 @@ footer {
     font-size: 2rem;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #00796b;  /* Dark teal color */
+    color: #00796b;  
 }
 
 .additional-info h3 {

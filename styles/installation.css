@@ -1,11 +1,9 @@
-/* Reset default margins and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body setup */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
@@ -17,16 +15,14 @@ body {
     overflow: hidden;
     position: relative;
     margin: 0;
-	flex-direction: column; /* Use flexbox to arrange content vertically */
-    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+	flex-direction: column; 
+    min-height: 100vh; 
 }
 
-/* Content section that will take all the available space except footer */
 .main-content {
-    flex: 1; /* This ensures the content area grows and pushes footer down */
+    flex: 1; 
 }
 
-/* Footer */
 footer {
     position: absolute;
     bottom: 0;
@@ -38,7 +34,6 @@ footer {
     font-size: 1rem;
 }
 
-/* Particles background */
 #particles-js {
     position: absolute;
     top: 0;
@@ -46,14 +41,13 @@ footer {
     width: 100%;
     height: 100%;
     background-color: #2b3e50;
-    z-index: -1; /* Ensure particles are in the background */
+    z-index: -1; 
 }
 
-/* Wiki container setup */
 .wiki-container {
     text-align: center;
     color: white;
-    z-index: 1; /* Ensure the text appears above the particles */
+    z-index: 1; 
     padding: 30px;
 }
 
@@ -68,15 +62,13 @@ footer {
     margin-bottom: 30px;
 }
 
-/* Button list setup */
 .button-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Space between buttons */
+    gap: 20px; 
 }
 
-/* Styling for buttons */
 .button {
     display: inline-block;
 	margin: 10px;
@@ -84,15 +76,15 @@ footer {
     font-size: 1.2rem;
     text-align: center;
     text-decoration: none;
-    border-radius: 25px; /* Rounded corners like the home page buttons */
+    border-radius: 25px; 
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and scaling */
+    transition: background-color 0.3s, transform 0.3s; 
 	background-color: #007bff;
     color: white;
 }
 
 .button:hover {
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    transform: scale(1.05); 
 	background-color: #0056b3;
 }
 
@@ -103,7 +95,7 @@ footer {
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
-    background-color: #24292f; /* Black background */
+    background-color: #24292f; 
     border: 2px solid transparent;
     border-radius: 8px;
     font-weight: bold;
@@ -112,7 +104,7 @@ footer {
 }
 
 .ccrates-button:hover {
-    background-color: #0366d6; /* Change color on hover */
+    background-color: #0366d6; 
 }
 
 .ccrates-menu-button {
@@ -122,7 +114,7 @@ footer {
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
-    background-color: #24292f; /* Black background */
+    background-color: #24292f; 
     border: 2px solid transparent;
     border-radius: 8px;
     font-weight: bold;
@@ -131,35 +123,31 @@ footer {
 }
 
 .ccrates-menu-button:hover {
-    background-color: #0366d6; /* Change color on hover */
+    background-color: #0366d6; 
 }
 
-/* Styling for the installation steps box */
 .installation-steps {
-    background-color: #e0f7fa; /* Light blue background */
+    background-color: #e0f7fa; 
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow to make it stand out */
-    font-family: 'Arial', sans-serif; /* Simple font */
-    text-align: left; /* Align text to the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: 'Arial', sans-serif; 
+    text-align: left; 
 }
 
-/* Styling for the step headings */
 .installation-steps h2 {
-    color: #00796b; /* Darker teal for the step headings */
-    font-size: 1.4rem; /* Slightly smaller font size */
+    color: #00796b; 
+    font-size: 1.4rem; 
     margin-bottom: 10px;
 }
 
-/* Styling for the paragraphs */
 .installation-steps p {
-    color: #333; /* Dark text for readability */
-    font-size: 1rem; /* Reduced font size for paragraphs */
+    color: #333; 
+    font-size: 1rem; 
     margin-bottom: 15px;
 }
 
-/* Styling for the download button */
 .installation-steps .button {
     display: inline-block;
     padding: 10px 20px;
@@ -174,7 +162,3 @@ footer {
 .installation-steps .button:hover {
     background-color: #004d40;
 }
-
-
-
-
